@@ -10,16 +10,25 @@
     <title>Caesar Cipher</title>
 </head>
 <body>
-
+    <h1>Caesar Cipher</h1>
     <div class="container">
-        <h1>Caesar Cipher</h1>
+        <div id="btn-container">
+            <button id="btn-encrypt" class="btn" onclick="encryptText()">Encrypt</button>
+            <button id="btn-decrypt" class="btn" onclick="decryptText()">Decrypt</button>
+            <button id="btn-clear" class="btn" onclick="clearTextArea()">Clear</button>
+        </div>
         <div id="main-app">
-            <textarea name="" id="text"></textarea>
-            <div id="btn-container">
-                <button id="btn-encrypt" class="btn" onclick="encryptText()">Encrypt</button>
-                <input id="key" type="text" placeholder="key">
-                <button id="btn-decrypt" class="btn" onclick="decryptText()">Decrypt</button>
-                <button id="btn-clear" class="btn" onclick="clearTextArea()">Clear</button>
+            <div>
+                <label for="text">Shift:</label>
+                <input id="key" type="number">
+            </div>
+            <div class = "input-area">
+                <label for="text">Text to Encrypt/Decrypt:</label><br />
+                <textarea name="" id="text"></textarea>
+            </div>
+            <div class="output-area">
+                <label for="text">Result:</label><br />
+                <textarea name="" id="result"></textarea>
             </div>
         </div>
     </div>

@@ -2,58 +2,111 @@
     background-color: black;
     color: white;
     font-family: "Roboto", sans-serif;
+    margin: 0;
 }
 
 .container {
     width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    height: 50vh;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+    margin: 48px 0;
 }
 
-.container h1 {
+h1 {
+    margin: 12px;
     text-align: center;
 }
 
-#main-app {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    align-items: center;
+label {
+    font-size: 12px;
 }
 
 #main-app textarea {
-    height: 100px;
+    height: 50px;
     width: 500px;
-    font-size: 16px;
+    font-size: 14px;
+}
+
+#main-app > div {
+    margin: 8px 0;
+}
+
+#key {
+    width: 70px;
+    margin: 0 15px 0 15px;
+    text-align: center;
+    margin: 8px;
+    border: 1px solid white;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 #btn-container {
-    margin-top: 30px;
     display: flex;
-    width: 100%;
-    justify-content: center;
+    flex-direction: column;
 }
-
-#btn-container input {
-    width: 50px;
-    margin: 0 15px 0 15px;
-    text-align: center;
-    border-radius: 8px;
-}
-
 .btn {
-    padding: 12px;
     text-align: center;
     font-weight: bold;
     border-radius: 8px;
+    margin: 8px;
+    padding: 8px 16px;
+    border: 1px solid white;
+}
+
+.btn:hover {
+    cursor: pointer;
+    transition-duration: 0.5s;
+    color:black;
 }
 
 #btn-encrypt {
-    background-color: blue;
+    background-color: #01352c;
+}
+
+#btn-encrypt:hover {
+    background-color: #bad8b6;
 }
 
 #btn-decrypt {
-    background-color: brown;
+    background-color: #9e1b32;
+}
+
+#btn-decrypt:hover {
+    background-color: #fd5c63;
+}
+
+#btn-clear:hover {
+    color: white;
+}
+
+@media (min-width: 300px) and (max-width: 600px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin: 8px 16px;
+    }
+    #btn-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    #main-app textarea {
+        height: 50px;
+        max-width: 80vw;
+        font-size: 12px;
+        justify-content: center;
+    }
+    h1 {
+       margin: 24px;
+    }
+    .btn {
+        width: 80px;
+    }
 }
